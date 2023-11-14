@@ -2,7 +2,11 @@
 
 using Events_Example_2;
 
-var video = new Video { Title = "Donnie Darko" };
+var video = new Video
+{
+    Title = "Donnie Darko",
+    Year = 2001
+};
 var videoEncoder = new VideoEncoder();
 var smsMessage = new SmsMessage(); // Subscriber
 var mailMessage = new MailMessage(); // Subscriber

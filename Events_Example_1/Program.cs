@@ -11,6 +11,7 @@ counterEvent.ThresholdReached += ThresholdReachedEventHandler;
 Console.WriteLine("Starting event sample - waiting 2 seconds and raise event");
 Thread.Sleep(2000);
 counterEvent.OnThresholdReached(new ThresholdReachedArgs { Threshold = 2, TimeReached = DateTime.Now });
+return;
 
 
 static void ThresholdReachedEventHandler(object? sender, EventArgs e)

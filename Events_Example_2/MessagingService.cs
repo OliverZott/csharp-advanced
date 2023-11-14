@@ -6,9 +6,18 @@ public abstract class MessagingService
 
     public void VideoEncodedMessage(object? sender, EventArgs e)
     {
-        Console.WriteLine($"Sending {Message} message.");
+        if (e is VideoEventArgs args)
+        {
+            var video = args.Video;
+            Console.WriteLine($"Sending {Message} message, after encoding {video}");
+        }
+        else
+        {
+            Console.WriteLine($"Sending {Message} message, after encoding");
+        }
     }
 }
+
 
 public class SmsMessage : MessagingService
 {
